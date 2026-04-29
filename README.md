@@ -34,6 +34,9 @@ Five models are explored and compared:
 
 As such, the neural net seems to predict fare prices most accurately, followed closely by XGBoost. 
 
+> Note: An interesting next step would be to further study the fare prices based on the physical location of origin and destination, since fare prices depend on these features as well. While I don't do this yet, I think I will look into this soon. 
+
+
 ## Key Techniques
 
 - `ColumnTransformer` preprocessing pipelines with `OneHotEncoder` and `StandardScaler`.
