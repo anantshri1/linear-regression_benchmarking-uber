@@ -1,9 +1,9 @@
 # Benchmarking Linear Regression - Predicting Uber Fare Prices
 
-Regression task to predict fare prices for Uber based on data provided by [Uber](https://www.kaggle.com/datasets/yasserh/uber-fares-dataset). 
+Regression task to predict fare prices for Uber based on data provided by [Kaggle](https://www.kaggle.com/datasets/yasserh/uber-fares-dataset). 
 
 ## The Challenge
-Based on historical data provided by Uber, we would like to accurately predict fare prices for future rides. While this is a regression task, we aim to compare various available techniques (simple Linear Regression, RIDGE, LASSO, XGBoost, and Neural Nets) to identify the best model for this.
+Based on historical data provided by Kaggle, we would like to accurately predict fare prices for future rides. While this is a regression task, we aim to compare various available techniques (simple Linear Regression, RIDGE, LASSO, XGBoost, and Neural Nets) to identify the best model for this.
 
 ## Exploratory Data Analysis
 EDA reveals some outliers in the data; as such, we impose certain filters on the dataframe to restrict the effect of these points on the prediction:
@@ -30,11 +30,11 @@ Five models are explored and compared:
 | XGBoost Regression | 0.783068 |
 | Two-layer Neural Net | 0.791399 |
 
-> Note: The neural net predicts a negative value for the fare in one case, as can be seen in the scatterplot comparing the predicted and true values.
+> Note: The neural net predicts a negative value for the fare in one case, as can be seen in the scatterplot comparing the predicted and true values. This is attributed to the fact neural nets do not have a non-negativity constraint on their outputs. This should be fixed by using a different activation function. 
 
 As such, the neural net seems to predict fare prices most accurately, followed closely by XGBoost. 
 
-> Note: An interesting next step would be to further study the fare prices based on the physical location of origin and destination, since fare prices depend on these features as well. While I don't do this yet, I think I will look into this soon. 
+> Note: An interesting next step would be to further study the fare prices based on the physical location of origin and destination, since fare prices depend on these features as well.
 
 
 ## Key Techniques
